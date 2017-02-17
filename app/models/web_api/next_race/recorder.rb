@@ -8,35 +8,56 @@ class WebApi::NextRace::Recorder
   end
 
   def persist_race(params)
-    course_hash = {name: params[:course]}
-    course = COURSE_MODEL.where(course_hash).first
-    if course.nil?
-      COURSE_MODEL.new(course_hash)
-      return {persisted: false, error: 'could not save or retrieve race course'}
-    end
+    course_hash = instantiate_course(params[:course])
+    return course_hash unless course_hash[:persisted]
+    course = course_hash[:course]
 
+    race_hash = create_race(course, params)
+    return race_hash unless race_hash[:persisted]
+    race = race_hash[:race]
+
+    competitors = create_runners(race, params[:runners])
+    race.runners << competitors
+    race.requested_at = DateTime.now
+    { persisted: race.save, errors: race.errors, race: race}
+  end
+
+
+  private
+
+  def instantiate_course(course_name)
+    course = COURSE_MODEL.where(name: course_name).first || COURSE_MODEL.new(name: course_name)
+    return {
+        persisted: course.save,
+        error: course.errors.full_messages,
+        course:course
+    }
+  end
+
+  def create_race(course, params)
     race = course.races.new(
         time: params[:time],
         distance: params[:distance]
     )
+    return {
+        persisted: race.save,
+        error: race.errors.full_messages,
+        race: race
+    }
+  end
 
-    return {persisted: false, error: 'could not create race information'} unless race.save
-
-    runners = []
-    params[:runners].each do |runner|
-      runner = RUNNER_MODEL.new(
+  def create_runners(race, runners)
+    competitors = []
+    runners.each do |runner|
+      runner = race.runners.new(
           number: runner[:number],
           horse_name: runner[:horse_name],
           jockey_name: runner[:jockey_name],
           form: runner[:form],
           odds: runner[:odds]
       )
-      runners << runner
+      competitors << runner
     end
-
-    race.runners << runners
-    race.requested_at = DateTime.now
-    race.save
   end
 
 end
