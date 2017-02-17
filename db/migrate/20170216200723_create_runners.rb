@@ -5,7 +5,7 @@ class CreateRunners < ActiveRecord::Migration[5.0]
       t.string :horse_name
       t.string :jockey_name
       t.string :form
-      t.integer :odds
+      t.decimal :odds, precision: 5, scale: 2
 
       t.timestamps
     end

@@ -43,10 +43,10 @@ ActiveRecord::Schema.define(version: 20170216232410) do
   end
 
   create_table "races", force: :cascade do |t|
-    t.integer  "distance"
+    t.decimal  "distance",       precision: 5, scale: 2
     t.datetime "time"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.integer  "race_course_id"
     t.datetime "requested_at"
   end
@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 20170216232410) do
     t.string   "horse_name"
     t.string   "jockey_name"
     t.string   "form"
-    t.integer  "odds"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.decimal  "odds",        precision: 5, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end

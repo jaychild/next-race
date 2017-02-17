@@ -1,0 +1,40 @@
+<div class="race_feed">
+
+  <div class="race_information">
+    <ul>
+      <h2><%= @course.name %></h2>
+      <li ><b>Time:</b> <span id="start_time"><%= @race.local_time %></span></li>
+      <li><b>Starts in:</b> <span id="count_down"><%= @race.minutes_to_start %> minutes</span></li>
+      <li><b>Distance (Furlongs):</b> <%= @race.furlongs %></li>
+    </ul>
+
+  </div>
+
+  <div class="runners">
+    <ul>
+      <% @runners.each do |runner| %>
+          <li>
+            <table class="runner_block" id="<%= runner.id %>">
+              <thead>
+              <tr>
+                <th>Jockey</th>
+                <th>Horse</th>
+                <th>Odds</th>
+                <th>Form</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><%= runner.jockey_name %></td>
+                <td><%= runner.horse_name %></td>
+                <td><%= runner.odds %></td>
+                <td><%= runner.form %></td>
+              </tr>
+              </tbody>
+            </table>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+

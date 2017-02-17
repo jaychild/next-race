@@ -1,0 +1,10 @@
+         Prefix Verb   URI Pattern                   Controller#Action
+next_race_index GET    /next_race(.:format)          next_race#index
+                POST   /next_race(.:format)          next_race#create
+  new_next_race GET    /next_race/new(.:format)      next_race#new
+ edit_next_race GET    /next_race/:id/edit(.:format) next_race#edit
+      next_race GET    /next_race/:id(.:format)      next_race#show
+                PATCH  /next_race/:id(.:format)      next_race#update
+                PUT    /next_race/:id(.:format)      next_race#update
+                DELETE /next_race/:id(.:format)      next_race#destroy
+           root GET    /                             next_race#index

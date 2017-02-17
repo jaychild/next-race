@@ -9,8 +9,7 @@ class WebApi::NextRace::Service
 
   def request_next_race
     race_json = get_resource
-    result = persist_race(race_json)
-
+    persist_race(race_json)
   end
 
   private

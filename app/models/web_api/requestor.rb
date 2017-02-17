@@ -6,7 +6,7 @@ class WebApi::Requestor
     @data = data
   end
 
-  def self.get_resource
+  def get_resource
     uri = URI(url + data)
     response = Net::HTTP.get_response(uri)
     JSON.parse(response.body)
