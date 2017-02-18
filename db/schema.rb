@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216232410) do
+ActiveRecord::Schema.define(version: 20170218163445) do
 
   create_table "api_race_requests", force: :cascade do |t|
     t.integer  "race_id"
@@ -18,6 +18,24 @@ ActiveRecord::Schema.define(version: 20170216232410) do
     t.datetime "requested_at"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "api_request_loggers", force: :cascade do |t|
+    t.string   "api_request"
+    t.string   "api_response"
+    t.integer  "api_id"
+    t.string   "api_errors"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "code"
+    t.string   "message"
+  end
+
+  create_table "next_race_loggers", force: :cascade do |t|
+    t.string   "error"
+    t.datetime "logged_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "race_apis", force: :cascade do |t|

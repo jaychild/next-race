@@ -1,0 +1,27 @@
+<table class="config_table">
+  <thead>
+  <tr>
+    <th>API Key</th>
+    <th>URL</th>
+    <th>Tracking</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @apis.each do |api| %>
+    <tr>
+      <td><%= api.key %></td>
+      <td><%= api.url %></td>
+      <td><%= api.live_update %></td>
+      <td>
+        <% if api.live_update? %>
+           <span class="table_actions"><%= link_to('Dectivate', api_configuration_path(api, {active: false}), method: :put) %></span>
+        <% else %>
+            <span class="table_actions"><%= link_to('Activate', api_configuration_path(api, {active: true}), method: :put) %></span> |
+            <span class="table_actions"><%= link_to('Delete', api_configuration_path(api), method: :delete) %></span>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

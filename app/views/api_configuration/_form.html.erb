@@ -1,0 +1,16 @@
+<fieldset>
+  <legend>New API Resource</legend>
+
+  <%= render partial: 'errors' %>
+
+  <%= form_for :api, method: :post do |f| %>
+
+      <%= f.label :key %>
+      <%= f.text_field :key %>
+
+      <%= f.label :url %>
+      <%= f.text_field :url %>
+
+      <%= f.submit 'Save' %>
+  <% end %>
+</fieldset>

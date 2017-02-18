@@ -1,4 +1,5 @@
 class WebApi::NextRace::Service
+  include WebApi::NextRace::Logger
   delegate :next_race_url, to: :api_lookup_klass
   delegate :get_resource, to: :requestor_klass
   delegate :persist_race, to: :recorder_klass
@@ -9,7 +10,8 @@ class WebApi::NextRace::Service
 
   def request_next_race
     race_json = get_resource
-    persist_race(race_json)
+    result = persist_race(race_json)
+    log_failure(result) unless result[:persisted]
   end
 
   private
@@ -17,7 +19,7 @@ class WebApi::NextRace::Service
   attr_reader :url
 
   def api_lookup_klass
-    @api_lookup_klass ||= Configuration::RaceApi
+    @api_lookup_klass ||= Config::RaceApi
   end
 
   def requestor_klass
