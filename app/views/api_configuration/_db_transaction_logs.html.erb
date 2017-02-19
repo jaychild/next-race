@@ -1,0 +1,18 @@
+<h2>Record Transaction Log</h2>
+<table class="request_logs_table">
+  <thead>
+  <tr>
+    <th>Error</th>
+    <th>Logged at</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @logs.each do |record| %>
+      <tr>
+        <td><%= record.error %></td>
+        <td><%= record.logged_at %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @logs, class: 'apple_pagination' %>

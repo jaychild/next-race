@@ -1,3 +1,4 @@
+<h2>External API Resources</h2>
 <table class="config_table">
   <thead>
   <tr>
@@ -12,7 +13,7 @@
     <tr>
       <td><%= api.key %></td>
       <td><%= api.url %></td>
-      <td><%= api.live_update %></td>
+      <td><%= check_box_tag(:active, api.live_update, api.live_update, disabled: true) %></td>
       <td>
         <% if api.live_update? %>
            <span class="table_actions"><%= link_to('Dectivate', api_configuration_path(api, {active: false}), method: :put) %></span>

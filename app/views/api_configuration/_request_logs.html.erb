@@ -1,0 +1,22 @@
+<h2>Request Logs</h2>
+<table class="request_logs_table">
+  <thead>
+  <tr>
+    <th>Time</th>
+    <th>Request</th>
+    <th>Response Code</th>
+    <th>Message</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @request_logs.each do |api| %>
+      <tr>
+        <td><%= api.created_at %></td>
+        <td><%= api.api_request %></td>
+        <td><%= api.code %></td>
+        <td><%= api.message %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @request_logs, class: 'apple_pagination' %>

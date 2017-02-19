@@ -3,7 +3,7 @@ module WebApi::NextRace::Logger
 
   def log_failure(hash)
     MODEL.create(
-        error: hash[:errors],
+        error: "object: #{hash[:object].class}, error: #{hash[:error].join(', ')}",
         logged_at: DateTime.now
     )
   end

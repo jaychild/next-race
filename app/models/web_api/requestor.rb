@@ -14,13 +14,13 @@ class WebApi::Requestor
     msg = response.message
 
     api_id = Config::RaceApi.where(url: url).pluck(:id).first
-    log_failure('', api_id, url, response, code, msg)
+    log_failure('', api_id, url, response.response, code, msg)
 
     JSON.parse(response.body)
   rescue => e
     api_id = Config::RaceApi.where(url: url).pluck(:id).first
-    log_failure(e, api_id, url, response, code, msg)
-    {'status' => 'could not establish connection to api.'}
+    log_failure(e, api_id, url, response.response, code, msg)
+    {}
   end
 
   private

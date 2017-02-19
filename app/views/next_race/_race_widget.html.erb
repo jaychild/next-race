@@ -17,6 +17,7 @@
             <table class="runner_block" id="<%= runner.id %>">
               <thead>
               <tr>
+                <th>No.</th>
                 <th>Jockey</th>
                 <th>Horse</th>
                 <th>Odds</th>
@@ -25,6 +26,7 @@
               </thead>
               <tbody>
               <tr>
+                <td><%= runner.number %></td>
                 <td><%= runner.jockey_name %></td>
                 <td><%= runner.horse_name %></td>
                 <td><%= runner.odds %></td>

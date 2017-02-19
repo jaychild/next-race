@@ -10,18 +10,17 @@ class WebApi::NextRace::Recorder
   def persist_race(params)
     course_hash = instantiate_course(params['course'])
     return course_hash unless course_hash[:persisted]
-    course = course_hash[:course]
+    course = course_hash[:object]
 
     race_hash = create_race(course, params)
     return race_hash unless race_hash[:persisted]
-    race = race_hash[:race]
+    race = race_hash[:object]
 
     competitors = create_runners(race, params['runners'])
     race.runners << competitors
     race.requested_at = DateTime.now
-    { persisted: race.save, errors: race.errors, race: race}
+    { persisted: race.save, error: race.errors, object: race}
   end
-
 
   private
 
@@ -30,7 +29,7 @@ class WebApi::NextRace::Recorder
     return {
         persisted: course.save,
         error: course.errors.full_messages,
-        course:course
+        object: course
     }
   end
 
@@ -42,7 +41,7 @@ class WebApi::NextRace::Recorder
     return {
         persisted: race.save,
         error: race.errors.full_messages,
-        race: race
+        object: race
     }
   end
 

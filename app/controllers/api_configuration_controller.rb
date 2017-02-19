@@ -1,5 +1,5 @@
 class ApiConfigurationController < ApplicationController
-  before_filter :new_api
+  before_filter :get_api_information
 
   def index
   end
@@ -36,8 +36,10 @@ class ApiConfigurationController < ApplicationController
     params[:api]
   end
 
-  def new_api
+  def get_api_information
     @api = Config::RaceApi.new
     @apis = Config::RaceApi.all
+    @request_logs = Logger::ApiRequestLogger.paginate(page: params[:page], per_page: 10).order(id: :desc)
+    @logs = Logger::NextRaceLogger.paginate(page: params[:page], per_page: 10).order(id: :desc)
   end
 end
