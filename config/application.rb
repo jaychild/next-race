@@ -13,5 +13,14 @@ module NextRace
     # -- all .rb files in that directory are automatically loaded.
 
     config.autoload_paths << Rails.root.join('lib')
+
+    # insures apis start as 'disabled'
+    config.after_initialize do
+      Config::RaceApi.all.each do |api|
+        api.live_update = false
+        api.save
+      end
+
+    end
   end
 end
