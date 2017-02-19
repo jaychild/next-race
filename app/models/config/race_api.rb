@@ -1,6 +1,6 @@
 # stores API address information
 class Config::RaceApi < ApplicationRecord
-  delegate :poll_api, to: :api_tracker_instance
+  delegate :poll_api, :kill_threads, to: :api_tracker_instance
 
   validates :key, uniqueness: true
   validates_presence_of :key, :url
@@ -30,6 +30,8 @@ class Config::RaceApi < ApplicationRecord
   def start_tracking
     if self.live_update?
       poll_api(self)
+    else
+      kill_threads
     end
   end
 

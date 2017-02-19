@@ -8,7 +8,7 @@ class WebApi::NextRace::Recorder
   end
 
   def persist_race(params)
-    course_hash = instantiate_course(params['course'])
+    course_hash = create_or_find_course(params['course'])
     return course_hash unless course_hash[:persisted]
     course = course_hash[:object]
 
@@ -24,7 +24,7 @@ class WebApi::NextRace::Recorder
 
   private
 
-  def instantiate_course(course_name)
+  def create_or_find_course(course_name)
     course = COURSE_MODEL.where(name: course_name).first || COURSE_MODEL.new(name: course_name)
     return {
         persisted: course.save,

@@ -12,6 +12,7 @@ class WebApi::NextRace::Service
     race_json = get_resource
     result = persist_race(race_json)
     log_failure(result) unless result[:persisted]
+    result
   end
 
   private

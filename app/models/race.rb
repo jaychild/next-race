@@ -4,7 +4,10 @@ class Race < ApplicationRecord
 
   belongs_to :race_course
   has_many :race_runners
-  has_many :runners, through: :race_runners
+  has_many :runners, through: :race_runners, dependent: :destroy
+
+  validates :time, presence: true
+  validates :distance, presence: true
 
   # scope :next_race, -> { order(:requested_at).last }
   scope :next_race, -> { joins(:race_course).select('races.distance, races.time, races.id, race_courses.name').order(:requested_at).last}

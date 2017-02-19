@@ -108,7 +108,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Run spec 'furlong_conversion_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'furlongs_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="next-race" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -128,7 +128,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/lib/calculations/furlong_conversion_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/database_entities/race/furlongs_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -142,7 +142,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Run spec 'pretty_local_time_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'local_time_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="next-race" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -162,7 +162,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/lib/calculations/time_conversion/pretty_local_time_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/database_entities/race/local_time_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -176,27 +176,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Rails console: next-race" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
-      <module name="next-race" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
-      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Run spec 'minutes_until_start_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'minutes_to_start_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="next-race" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -216,7 +196,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/lib/calculations/time_conversion/minutes_until_start_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/database_entities/race/minutes_to_start_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -230,7 +210,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Run spec 'logger_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'race_course_spec': next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="next-race" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -250,11 +230,45 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/logger/logger_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/database_entities/race_course/validation_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All specs in spec: next-race" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="next-race" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
@@ -285,6 +299,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.5.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v7.1.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.13.1, RVM: ruby-2.3.0) [gem]" level="application" />
@@ -293,12 +308,14 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.12.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.4, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crack (v0.4.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.17, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.7, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashdiff (v0.3.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.8.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.6.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.2.2, RVM: ruby-2.3.0) [gem]" level="application" />
@@ -313,6 +330,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v1.2.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.7.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="public_suffix (v2.0.5, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v3.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.3.0) [gem]" level="application" />
@@ -328,6 +346,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.5.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v3.5.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.5.0, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="safe_yaml (v1.0.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.23, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.6, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
@@ -343,6 +362,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v3.0.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.4.0, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webmock (v2.3.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.5, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.1.5, RVM: ruby-2.3.0) [gem]" level="application" />

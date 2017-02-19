@@ -1,0 +1,19 @@
+<h2>Threads</h2>
+<table class="config_table">
+  <thead>
+  <tr>
+    <th>Thread</th>
+    <th>Status</th>
+    <th>Alive?</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @threads.each do |thread| %>
+      <tr>
+        <td><%= thread %></td>
+        <td><%= thread.status %></td>
+        <td><%= thread.alive? %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

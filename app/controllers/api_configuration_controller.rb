@@ -41,5 +41,6 @@ class ApiConfigurationController < ApplicationController
     @apis = Config::RaceApi.all
     @request_logs = Logger::ApiRequestLogger.paginate(page: params[:page], per_page: 10).order(id: :desc)
     @logs = Logger::NextRaceLogger.paginate(page: params[:page], per_page: 10).order(id: :desc)
+    @threads = WebApi::Tracker.instance.threads
   end
 end
