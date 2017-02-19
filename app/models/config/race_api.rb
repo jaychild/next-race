@@ -19,6 +19,13 @@ class Config::RaceApi < ApplicationRecord
     Config::RaceApi.where(key: NEXT_RACE_KEY).pluck(:live_update)[0]
   end
 
+  def self.disable_all
+    Config::RaceApi.all.each do |api|
+      api.live_update = false
+      api.save
+    end
+  end
+
   private
 
   # gets the single instance of the web_api_tracker
